@@ -17,7 +17,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>..
 #
 
-PROJECT_NAME = App
+PROJECT_NAME = Rotating-Polygon
 FILES = main app res polygon
 
 SRC_DIR = src
@@ -32,7 +32,7 @@ ifeq ($(OS), Windows_NT)
 	# Windows(configure here the path of the libraries)
     SEP = \\
 
-    LIB_PATHS = C:/SDL2-2.30.7/x86_64-w64-mingw32   
+    LIB_PATHS = # C:/SDL2-2.30.7/x86_64-w64-mingw32 (example)
 
     OS_LIBS =
    
@@ -44,7 +44,7 @@ else
     	# Linux(configure here the path of the libraries)
         SEP = /
 
-        LIB_PATHS = # /usr/local/lib/SDL2
+        LIB_PATHS = # /usr/local/lib/SDL2 (example)
 
         OS_LIBS = 
 

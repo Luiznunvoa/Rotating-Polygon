@@ -1,14 +1,14 @@
 //
 // Copyright (c) 2024 Luiz Gabriel Moraes "Luiz".
 //
-// This file is part of SimpleChess_SDL.
+// This file is part of Rotating-Polygon.
 //
-// SimpleChess_SDL is free software: you can redistribute it and/or modify
+// Rotating-Polygon is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License, version 3
 // as published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// SimpleChess_SDL is distributed in the hope that it will be useful,
+// Rotating-Polygon is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU General Public License for more details.
@@ -22,18 +22,22 @@
 
 #include <SDL.h>
 
-typedef struct {
+
+typedef struct 
+{
+    float x; // x-coordinate
+    float y; // y-coordinate
+} Point;
+
+typedef struct 
+{
     float x1, y1, x2, y2;  // Endpoints of the edge
     float currentX;        // Current x-coordinate during scanning
     float slopeInverse;    // Inverse slope for edge stepping
 } Edge;
 
-typedef struct {
-    float x;
-    float y;
-} Point;
-
-typedef struct {
+typedef struct 
+{
     Point *vertices;  // Array of vertices
     int vertexCount;  // Number of vertices
 } Polygon;

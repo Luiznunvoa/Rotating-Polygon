@@ -21,6 +21,7 @@
 
 #define FPS 60
 
+// Initialization of the window using SDL
 int initSDL(SDL_Instance* instance)
 {
     *instance = (SDL_Instance){0};
@@ -49,12 +50,14 @@ int initSDL(SDL_Instance* instance)
     return 1;
 }
 
+// Destroy the window and quit SDL
 void destroySDL(SDL_Instance *instance)
 {
 	SDL_DestroyWindow(instance->window);
 	SDL_Quit();
 }
 
+// Set a pixel on the window surface
 void SetPixel(SDL_Surface *surface, int x, int y, Uint32 color)
 {
     if (x < 0 || x >= surface->w || y < 0 || y >= surface->h)
@@ -66,6 +69,7 @@ void SetPixel(SDL_Surface *surface, int x, int y, Uint32 color)
     *(Uint32 *)target_pixel = color;
 }
 
+// Get the delta time between frames
 void getDeltaTime(SDL_Instance* instance)
 {
     instance->start_time = SDL_GetTicks();
@@ -75,6 +79,7 @@ void getDeltaTime(SDL_Instance* instance)
         instance->delta_time = 1.0f / FPS; 
 }
 
+// Delay the frame to control the FPS
 void delayFrame(SDL_Instance* instance)
 {
     instance->frame_time = SDL_GetTicks() - instance->start_time;
