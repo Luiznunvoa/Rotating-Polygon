@@ -44,9 +44,9 @@ else
     	# Linux(configure here the path of the libraries)
         SEP = /
 
-        LIB_PATHS = # /usr/local/lib/raylib
+        LIB_PATHS = # /usr/local/lib/SDL2
 
-        OS_LIBS = # m pthread dl rt    
+        OS_LIBS = 
 
         COPY = cp
         DEL = rm -f
