@@ -34,7 +34,7 @@ int initSDL(SDL_Instance* instance)
     instance->window =  SDL_CreateWindow(
         "Geometry?",
         SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-        1000, 1000,
+        800, 800,
         SDL_WINDOW_SHOWN
     );
     if (instance->window == NULL)

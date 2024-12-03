@@ -60,7 +60,7 @@ void app(void)
             }
         }
 
-        rotate_polygon(&polygon, M_PI / 180.0f, (Point){500, 500}); // Rotate around the center of the screen
+        rotate_polygon(&polygon, M_PI / 180.0f, (Point){400, 400}); // Rotate around the center of the screen
 
         LOCK_SURFACE(instance.window_surface);
 
