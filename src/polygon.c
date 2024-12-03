@@ -55,6 +55,7 @@ void draw_polygon(SDL_Surface *surface, Polygon polygon, Uint32 color)
 
         if (p1.y < minY) 
             minY = (int)p1.y;
+
         if (p2.y > maxY) 
             maxY = (int)p2.y;
     }
@@ -118,10 +119,12 @@ void draw_polygon(SDL_Surface *surface, Polygon polygon, Uint32 color)
 }
 
 // Function to rotate a polygon around the origin
-void rotate_polygon(Polygon *polygon, float angleRadians, Point center)
+void rotate_polygon(Polygon *polygon, float angleRadians, float deltaTime, Point center)
 {
-    const float cosAngle = cosf(angleRadians);
-    const float sinAngle = sinf(angleRadians);
+    // Ajusta o ângulo pela variação de tempo
+    float adjustedAngle = angleRadians * (deltaTime * 100.0f);
+    const float cosAngle = cosf(adjustedAngle);
+    const float sinAngle = sinf(adjustedAngle);
 
     for (int i = 0; i < polygon->vertexCount; i++) // Loop through vertices and apply rotation
     {

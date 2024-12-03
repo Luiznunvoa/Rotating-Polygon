@@ -60,7 +60,7 @@ void app(void)
             }
         }
 
-        rotate_polygon(&polygon, M_PI / 180.0f, (Point){400, 400}); // Rotate around the center of the screen
+        rotate_polygon(&polygon, M_PI / 180.0f, instance.delta_time, (Point){400, 400}); // Rotate around a point
 
         LOCK_SURFACE(instance.window_surface);
 
@@ -74,7 +74,6 @@ void app(void)
 
         delayFrame(&instance);
     }
-
     destroySDL(&instance);
     return;
 }

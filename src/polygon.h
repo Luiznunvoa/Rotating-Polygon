@@ -39,6 +39,6 @@ typedef struct {
 } Polygon;
 
 void draw_polygon(SDL_Surface *surface, Polygon polygon, Uint32 color);
-void rotate_polygon(Polygon *polygon, float angleRadians, Point center);
+void rotate_polygon(Polygon *polygon, float angleRadians, float deltaTime, Point center);
 
 #endif // POLYGON_H
