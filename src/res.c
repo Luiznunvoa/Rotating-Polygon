@@ -51,22 +51,22 @@ int initSDL(SDL_Instance* instance)
 }
 
 // Destroy the window and quit SDL
-void destroySDL(SDL_Instance *instance)
+void destroySDL(SDL_Instance* instance)
 {
 	SDL_DestroyWindow(instance->window);
 	SDL_Quit();
 }
 
 // Set a pixel on the window surface
-void SetPixel(SDL_Surface *surface, int x, int y, Uint32 color)
+void SetPixel(SDL_Surface* surface, int x, int y, Uint32 color)
 {
     if (x < 0 || x >= surface->w || y < 0 || y >= surface->h)
         return;
 
-    Uint8 *pixels = (Uint8 *)surface->pixels;
-    Uint8 *target_pixel = pixels + y * surface->pitch + x * surface->format->BytesPerPixel;
+    Uint8* pixels = (Uint8*)surface->pixels;
+    Uint8* target_pixel = pixels + y * surface->pitch + x * surface->format->BytesPerPixel;
 
-    *(Uint32 *)target_pixel = color;
+    *(Uint32*)target_pixel = color;
 }
 
 // Get the delta time between frames

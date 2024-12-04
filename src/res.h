@@ -37,8 +37,8 @@ typedef struct
 } SDL_Instance;
 
 int initSDL(SDL_Instance* instance);
-void destroySDL(SDL_Instance *instance);
-void SetPixel(SDL_Surface *surface, int x, int y, Uint32 color);
+void destroySDL(SDL_Instance* instance);
+void SetPixel(SDL_Surface* surface, int x, int y, Uint32 color);
 void getDeltaTime(SDL_Instance* instance);
 void delayFrame(SDL_Instance* instance);
 

@@ -42,7 +42,7 @@ typedef struct
     int vertexCount;  // Number of vertices
 } Polygon;
 
-void draw_polygon(SDL_Surface *surface, Polygon polygon, Uint32 color);
-void rotate_polygon(Polygon *polygon, float angleRadians, float deltaTime, Point center);
+void draw_polygon(SDL_Surface* surface, Polygon polygon, Uint32 color);
+void rotate_polygon(Polygon* polygon, float angleRadians, float deltaTime, Point center);
 
 #endif // POLYGON_H
